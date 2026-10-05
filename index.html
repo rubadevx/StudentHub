@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <span>Student<span class="logo-highlight">Hub</span></span>
+        </div>
+
+        <nav class="navigation">
+
+            <p class="menu-title">MENU</p>
+
+            <a href="#" class="nav-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Tasks</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-note-sticky"></i>
+                <span>Notes</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-book"></i>
+                <span>Subjects</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Pomodoro</span>
+            </a>
+
+            <p class="menu-title second">OTHER</p>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="upgrade-card">
+
+                <div class="upgrade-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <h3>Keep Learning!</h3>
+
+                <p>
+                    Small progress every day leads to big results.
+                </p>
+
+                <button>
+                    Stay Focused
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="mobile-logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                StudentHub
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search anything...">
+            </div>
+
+            <div class="top-actions">
+
+                <button class="icon-button" id="themeButton">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="icon-button notification">
+                    <i class="fa-solid fa-bell"></i>
+                    <span></span>
+                </button>
+
+                <div class="profile">
+
+                    <div class="avatar">
+                        R
+                    </div>
+
+                    <div class="profile-info">
+                        <strong>Student</strong>
+                        <small>Keep learning 🚀</small>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <section class="content">
+
+            <!-- WELCOME -->
+            <div class="welcome">
+
+                <div>
+                    <p class="greeting">Good afternoon 👋</p>
+
+                    <h1>
+                        Welcome back, <span>Student!</span>
+                    </h1>
+
+                    <p class="welcome-text">
+                        Ready to continue your learning journey?
+                    </p>
+                </div>
+
+                <div class="date-card">
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <div>
+                        <small>Today</small>
+                        <strong id="currentDate">Loading...</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <div class="stat-content">
+                        <p>Total Tasks</p>
+                        <h2 id="totalTasks">12</h2>
+                        <small>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            Keep going
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+
+                    <div class="stat-content">
+                        <p>Subjects</p>
+                        <h2>5</h2>
+                        <small>
+                            Active subjects
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div class="stat-content">
+                        <p>Completed</p>
+                        <h2 id="completedTasks">8</h2>
+                        <small>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            Great work
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+
+                    <div class="stat-content">
+                        <p>Study Streak</p>
+                        <h2>7 Days</h2>
+                        <small>
+                            🔥 Don't break it!
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAIN GRID -->
+            <div class="dashboard-grid">
+
+
+                <!-- TASKS -->
+                <div class="card tasks-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <p class="card-label">PRODUCTIVITY</p>
+                            <h2>Today's Tasks</h2>
+                        </div>
+
+                        <button class="add-task" id="addTaskButton">
+                            <i class="fa-solid fa-plus"></i>
+                            Add Task
+                        </button>
+
+                    </div>
+
+
+                    <div class="tasks-list" id="tasksList">
+
+                        <div class="task completed">
+
+                            <div class="task-check">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="task-info">
+                                <strong>Complete DAA assignment</strong>
+                                <span>Design & Analysis of Algorithms</span>
+                            </div>
+
+                            <span class="task-time">10:00 AM</span>
+
+                        </div>
+
+
+                        <div class="task">
+
+                            <div class="task-check"></div>
+
+                            <div class="task-info">
+                                <strong>MongoDB practical</strong>
+                                <span>Database Management</span>
+                            </div>
+
+                            <span class="task-time">02:00 PM</span>
+
+                        </div>
+
+
+                        <div class="task">
+
+                            <div class="task-check"></div>
+
+                            <div class="task-info">
+                                <strong>Revise Java OOP</strong>
+                                <span>Programming</span>
+                            </div>
+
+                            <span class="task-time">05:00 PM</span>
+
+                        </div>
+
+
+                        <div class="task">
+
+                            <div class="task-check"></div>
+
+                            <div class="task-info">
+                                <strong>Read Computer Graphics</strong>
+                                <span>Computer Graphics</span>
+                            </div>
+
+                            <span class="task-time">08:00 PM</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROGRESS -->
+                <div class="card progress-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <p class="card-label">OVERVIEW</p>
+                            <h2>Study Progress</h2>
+                        </div>
+
+                        <button class="more-button">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="progress-container">
+
+                        <div class="progress-circle">
+
+                            <div class="circle-inner">
+                                <strong>72%</strong>
+                                <span>Overall</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-info">
+
+                        <div>
+                            <span>
+                                <i class="dot blue-dot"></i>
+                                Completed
+                            </span>
+
+                            <strong>72%</strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                <i class="dot gray-dot"></i>
+                                Remaining
+                            </span>
+
+                            <strong>28%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- BOTTOM GRID -->
+            <div class="bottom-grid">
+
+
+                <!-- SUBJECTS -->
+                <div class="card subjects-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <p class="card-label">LEARNING</p>
+                            <h2>My Subjects</h2>
+                        </div>
+
+                        <button class="view-button">
+                            View All
+                        </button>
+
+                    </div>
+
+
+                    <div class="subjects">
+
+                        <div class="subject">
+
+                            <div class="subject-icon blue">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+
+                            <div class="subject-details">
+                                <div>
+                                    <strong>MongoDB</strong>
+                                    <span>80%</span>
+                                </div>
+
+                                <div class="bar">
+                                    <div style="width:80%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject">
+
+                            <div class="subject-icon purple">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <div class="subject-details">
+                                <div>
+                                    <strong>Java</strong>
+                                    <span>70%</span>
+                                </div>
+
+                                <div class="bar">
+                                    <div style="width:70%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject">
+
+                            <div class="subject-icon green">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+
+                            <div class="subject-details">
+                                <div>
+                                    <strong>DAA</strong>
+                                    <span>60%</span>
+                                </div>
+
+                                <div class="bar">
+                                    <div style="width:60%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="subject">
+
+                            <div class="subject-icon orange">
+                                <i class="fa-solid fa-cube"></i>
+                            </div>
+
+                            <div class="subject-details">
+                                <div>
+                                    <strong>Computer Graphics</strong>
+                                    <span>45%</span>
+                                </div>
+
+                                <div class="bar">
+                                    <div style="width:45%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- POMODORO -->
+                <div class="card pomodoro-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <p class="card-label">FOCUS</p>
+                            <h2>Pomodoro</h2>
+                        </div>
+
+                        <i class="fa-solid fa-stopwatch timer-icon"></i>
+
+                    </div>
+
+
+                    <div class="timer">
+
+                        <div class="timer-ring">
+
+                            <div>
+                                <strong id="timer">25:00</strong>
+                                <span>Focus Time</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timer-buttons">
+
+                        <button class="timer-button primary" id="startButton">
+                            <i class="fa-solid fa-play"></i>
+                            Start Focus
+                        </button>
+
+                        <button class="timer-button secondary" id="resetButton">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
